@@ -1,5 +1,18 @@
 # BlissBuddy-Mental_Health_Support_Web_App
 
+•	Led the research on affordable and accessible mental health support with formulation of 5 pairs of null alternative hypotheses.
+
+•	Based on results, built a ground-breaking web application for individualised mental health support that makes use of the Flask framework.
+
+•	Integrated real-time facial expression analysis using a pre-trained VGG16 model on FER13 dataset, combined with the PHQ-9 questionnaire for holistic mental health evaluation.
+
+•	Implemented features like webcam interaction, customized recommendations, and suggestions and useful links.
+
+•	Overcame challenges in model integration culminating in a user-centric platform aimed at enhancing mental well-being.
+
+
+
+
 Home Page:
 
  
@@ -55,4 +68,6 @@ It will follow same workflow as above and provide suggestions and recommendation
 
  
 
-![image](https://github.com/bhavesh-pashte/BlissBuddy-Mental_Health_Support_Web_App/assets/95355473/54baad3a-55d9-4132-a4ad-18d23fa7af26)
+
+##Working Demo of Web App
+[https://drive.google.com/file/d/1B343B4--Vj0siix8Xa5IjIfcaVC08DMh/view?usp=sharing](url)

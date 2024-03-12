@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffc09f, #ffee93);
+            color: #1D1842;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+         h2 {
+            font-size: 2.0em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+
+        p {
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            color: #1D1842; /* Updated text color */
+            font-family: 'Times New Roman';
+        }
+        .gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: auto;
+            display: block;
+            border: 5px solid #EF3B33}
+          footer {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>BlissBuddy - Your Emotional Wellness Companion</h1>
+    </header>
+    <img class="gif" src="{{ url_for('static', filename='small_happy.gif') }}" style="width: 400px; height: auto;">
+    <p><B>Great News!</B></p><br>
+    <p>There are no signs of depression, it seems you are radiating positivity today. Maintaining your mental well-being is fantastic, and remember, small actions can make a big difference.</p><h2> Here are some ways to keep the good vibes flowing:</h2><br>
+    <p>1. Take a moment to appreciate the good things in your life, big or small.</p>
+    <p>2. Spend time with loved ones who make you feel supported and uplifted.</p>
+    <p>3. Make time for activities that bring you joy and relaxation.</p>
+    <p>4. A simple act of kindness, like a smile or a compliment, can brighten someone else's day and boost your own mood.</p>
+    <p><B>Remember, BlissBuddy is always here to support you on your journey to emotional well-being. If you ever need some extra guidance or resources, feel free to explore BlissBuddy</p>
+    <footer>
+    <p><I>“The more you care for your mental health, the more you realize how unnecessary and superficial other things are.” – Maxime Lagacé</I></p>
+    </footer>
+</body>
+</html>
+
+
+

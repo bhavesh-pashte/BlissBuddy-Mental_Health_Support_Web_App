@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffc09f, #ffee93);
+            color: #1D1842;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 20px;}
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #1D1842; /* Updated text color */
+            font-family: 'Times New Roman';
+        }
+        .gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: auto;
+            display: block;
+            border: 5px solid #EF3B33}
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 0px; /* Adjust margin as needed */
+        }
+        footer {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1><h1>BlissBuddy - Your Emotional Wellness Companion</h1>
+    </header><br>
+    <img class="gif" src="{{ url_for('static', filename='depression_detected_1.gif') }}" style="width: 400px; height: auto;">
+    <p>{{ output_text1 }}</p>
+    <p><strong>{{ output_text2 }}</strong></p>
+    <p><strong>1. Practice self-care:</strong> Ensure you get enough sleep, eat a balanced diet, and engage in regular physical activity.</p>
+    <p><strong>2. Connect with others:</strong> Spend time with friends and family, and engage in activities that bring you joy.</p>
+    <p><strong>3. Seek support:</strong> Talk to someone you trust about how you're feeling, and consider joining a support group.</p>
+    <p><B>Mandatorily you have to perform breathing exercises to calm yourself and other breathing exercise like Breath focus technique.</p><br>
+    <div class="image-container">
+       <img class="gif" src="{{ url_for('static', filename='breathe.gif') }}" style="width: 300px; height: auto;">
+       <img class="gif" src="{{ url_for('static', filename='breathe_focus_technique.gif') }}" style="width: 300px; height: auto;">
+    </div><br><br>
+    <p><B>Helpful sources are provided below which are clickable links.</p><br><br>
+    <div class="image-container">
+       <a href="https://www.youtube.com/watch?v=lPJAtHWq08k" target="_blank">
+       <img src="{{ url_for('static', filename='breathing_image.jpg') }}" alt="Breathing exerices" width="450" height="auto">
+       </a>
+       <a href="https://www.youtube.com/watch?v=YRJ6xoiRcpQ" target="_blank">
+       <img src="{{ url_for('static', filename='soothing_music.jpg') }}" alt="Soothing music" width="450" height="auto">
+       </a>       
+    </div><br>
+    <footer>
+    <p><I>"Give your stress wings and let it fly."- Terri Guillemets</I></p>
+    </footer>
+</body>
+</html>

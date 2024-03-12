@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Health Questionnaire (PHQ-9)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffc09f, #ffee93);
+            color: #1D1842;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .login {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1D1842;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #8E0D3C;
+        }
+        header {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+
+        h2{
+        font-size: 2.0em;
+        font-family: 'Times New Roman';
+        margin-bottom: 20px;
+        color: #fff;
+        }
+        label {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #fff;
+            font-family: 'Times New Roman';
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #FDA1A2; /* Rose Pink */
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #1D1842;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        button {
+            background-color: #a0ced9;
+            color: #1D1842;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #adf7b6;
+        }
+        footer {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>BlissBuddy - Your Emotional Wellness Companion</h1>
+    </header><br><br>
+    <div class="login">
+        <h2>Patient Health Questionnaire (PHQ-9)</h2><br>
+
+        <form action="{{ url_for('score')}}" method="post">
+            <label>Q1. Little interest or pleasure in doing things.</label><br><br>
+            <div class="form-floating">
+                <select class="form-select" name="floatingSelect1">
+                    <option selected>Open this select menu</option>
+                    <option value="0">Not at all</option>
+                    <option value="1">Several days</option>
+                    <option value="2">More than half the days</option>
+                    <option value="3">Nearly every day</option>
+                </select></div><br>
+            <label>Q2. Feeling down, depressed or hopeless</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect2" name="floatingSelect2" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q3. Trouble falling or staying asleep or sleeping too much.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect3" name="floatingSelect3" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q4. Feeling tired or having little energy.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect4" name="floatingSelect4" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q5. Poor appetite or overeating.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect5" name="floatingSelect5" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q6. Feeling bad about yourself--or that you are a failure or have let yourself or your family down.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect6" name="floatingSelect6" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q7. Trouble concentrating on things, such as reading the newspaper or watching television.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect7" name="floatingSelect7" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q8. Moving or speaking so slowly that other people could have noticed. Or the opposite - being so figety or restless that you have been moving around a lot more than usual.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect8" name="floatingSelect8" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+    <label>Q9. Thoughts you would be better off dead or of hurting yourself.</label><br><br>
+    <div class="form-floating">
+    <select class="form-select" id="floatingSelect9" name="floatingSelect9" aria-label="Floating label select example">
+    <option selected>Open this select menu</option>
+    <option value="0">Not at all</option>
+    <option value="1">Several days</option>
+    <option value="2">More than half the days</option>
+    <option value="3">Nearly every day</option>
+    </select></div><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div><br>
+   <footer>
+   <p><I>“You don’t have to be positive all the time. It’s perfectly okay to feel sad, angry, annoyed, frustrated, scared, or anxious. Having feelings doesn’t make you a ‘negative person.’ It makes you human.”– Lori Deschene</I></p>
+   </footer>
+</body>
+</html>

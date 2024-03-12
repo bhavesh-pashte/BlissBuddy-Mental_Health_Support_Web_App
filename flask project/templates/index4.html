@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffc09f, #ffee93);
+            color: #1D1842;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 20px;}
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #1D1842; /* Updated text color */
+            font-family: 'Times New Roman';
+        }
+        .gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: auto;
+            display: block;
+            border: 5px solid #EF3B33}
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 0px; /* Adjust margin as needed */
+        }
+        footer {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>BlissBuddy - Your Emotional Wellness Companion</h1></header><br>
+    <img class="gif" src="{{ url_for('static', filename='depression_detected.gif') }}" style="width: 300px; height: auto;">
+    <p>{{ output_text1 }}</p>
+    <p><strong>{{ output_text2 }}</strong></p>
+    <p><strong>1. Seek professional help:</strong> Consider intensive outpatient or inpatient treatment, especially if your symptoms are significantly impacting your daily life.</p>
+    <p><strong>2. Stay connected:</strong> Maintain social connections, even if it's difficult.</p>
+    <p><strong>3. Focus on self-care:</strong> Prioritize taking care of yourself, even if it feels like a challenge.</p>
+    <p><B>Mandatorily you have to perform breathing exercises to calm yourself and other breathing exercise like Huming bee breathing.</p><br>
+    <div class="image-container">
+       <img class="gif" src="{{ url_for('static', filename='breathe.gif') }}" style="width: 300px; height: auto;">
+       <img class="gif" src="{{ url_for('static', filename='huming_bee_breathing.gif') }}" style="width: 300px; height: auto;">
+    </div><br><br>
+    <footer><p><I>"ONE DAY YOU WILL TELL YOUR STORY OF HOW YOU OVERCAME WHAT YOU WENT THROUGH, AND IT WILL BE SOMEONE ELSE’S SURVIVAL GUIDE."- Brené Brown</I></p></footer>
+</body>
+</html>

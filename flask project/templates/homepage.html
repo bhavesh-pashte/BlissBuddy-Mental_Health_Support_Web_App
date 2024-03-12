@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodCheck360 - Your Emotional Wellness Companion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ffc09f, #ffee93);
+            color: #1D1842; /* Updated text color */
+        }
+
+        header {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 20px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fcf5c7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #a0ced9;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            color: #1D1842; /* Updated text color */
+        }
+
+        p {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #1D1842; /* Updated text color */
+            font-family: 'Times New Roman';
+            font-size: 1.3em;
+        }
+
+        button {
+            background-color: #a0ced9;
+            color: #1D1842; /* Updated text color */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #adf7b6;
+        }
+
+        .gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: auto;
+            display: block;
+            border: 5px solid #ffee93;
+        }
+        footer {
+            background: linear-gradient(45deg, #a0ced9, #adf7b6);
+            color: #1D1842; /* Updated text color */
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlissBuddy - Your Emotional Wellness Companion</h1>
+    </header>
+    <form action="{{ url_for('start_webcam') }}" method="POST">
+    <div class="container">
+        <p>Welcome to BlissBuddy – Your companion on the path to emotional well-being.</p>
+        <p>BlissBuddy is an innovative web application designed to empower you with insights into your emotional state. Using advanced facial emotion detection technology, our application analyzes your expressions in real-time. If a neutral or sad emotion is detected, BlissBuddy seamlessly guides you through a comprehensive PHQ9 survey.</p>
+        <p>Take a journey towards self-discovery as BlissBuddy assesses your mental well-being and generates a personalized PHQ-9 score. This score reflects your stress level and provides valuable insights into your emotional state. Our user-friendly interface ensures a seamless experience, offering guidance and support every step of the way.</p>
+
+        <img class="gif" src="{{ url_for('static', filename='face_detection.gif') }}" alt="Facial Emotion Detection GIF" style="width: 300px; height: auto;">
+        <p>Press the below button to start the webcam</p>
+        <button type="submit">START WEBCAM</button>
+    </div>
+    <footer>
+    <p><I>“Your mental health is a priority. Your happiness is essential. Your self-care is a necessity.” – Melody Beattie</I></p>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
